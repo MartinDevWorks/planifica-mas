@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Control de Presupuesto</title>
+</head>
+<body>
+  <div class="container my-4">
+    <header class="mb-4">
+      <h1 class="text-center text-white">Control de Presupuesto</h1>
+    </header>
+    
+    <!-- Formulario para Ingresar Presupuesto -->
+    <section class="mb-4">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          Ingresar Presupuesto
+        </div>
+        <div class="card-body">
+          <form id="form-presupuesto">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="presupuesto">Monto Presupuesto ($):</label>
+                <input type="number" class="form-control" id="presupuesto" placeholder="Ej. 1000" min="0">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="fecha-presupuesto">Fecha:</label>
+                <input type="date" class="form-control" id="fecha-presupuesto">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar Presupuesto</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="row">
+      <!-- Formulario para Agregar Gastos -->
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-header bg-info text-white">
+            Añade tus Gastos
+          </div>
+          <div class="card-body">
+            <form id="agregar-gasto" action="#">
+              <div class="form-group">
+                <label for="gasto">Nombre del Gasto:</label>
+                <input type="text" class="form-control" id="gasto" placeholder="Ej. Compras del supermercado">
+              </div>
+              <div class="form-group">
+                <label for="cantidad">Cantidad ($):</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="Ej. 50" min="0">
+              </div>
+              <div class="form-group">
+                <label for="fecha-gasto">Fecha del Gasto:</label>
+                <input type="date" class="form-control" id="fecha-gasto">
+              </div>
+              <button type="submit" class="btn btn-primary">Agregar Gasto</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sección de Listado y Resumen -->
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-header bg-secondary text-white">
+            Resumen del Presupuesto
+          </div>
+          <div class="card-body">
+            <div id="gastos">
+              <ul class="list-group mb-3"></ul>
+            </div>
+            <div id="presupuesto" class="mb-2">
+              <div class="alert alert-primary">
+                <p>Presupuesto: $ <span id="total"></span> </p>
+                <p><small>Fecha: <span id="fecha-ingreso"></span></small></p>
+              </div>
+              <div class="restante alert alert-success">
+                <p>Restante: $ <span id="restante"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

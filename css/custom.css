@@ -1,0 +1,31 @@
+body {
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+}
+
+h1, h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card-header {
+  font-size: 1.2rem;
+  font-weight: 400;
+	border-radius: 15px 15px 0 0;
+}
+
+.alert p, .alert small {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
